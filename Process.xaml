@@ -5,7 +5,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1415,1383</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>751,1626</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ProcessTransaction_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -59,14 +59,14 @@
       <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="説明: このファイルで他のプロセス固有のファイルがすべて呼び出されます。&#xA;多くの判断が含まれる場合は、シーケンスではなくフローチャートを使用してください。" DisplayName="プロセス" sap:VirtualizedContainerService.HintSize="600,1278" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="説明: このファイルで他のプロセス固有のファイルがすべて呼び出されます。&#xA;多くの判断が含まれる場合は、シーケンスではなくフローチャートを使用してください。" DisplayName="プロセス" sap:VirtualizedContainerService.HintSize="761,1561" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence sap2010:Annotation.AnnotationText="入力データを初期化してアプリケーションを開きます。" DisplayName="初期化" sap:VirtualizedContainerService.HintSize="558,125" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <Sequence sap2010:Annotation.AnnotationText="入力データを初期化してアプリケーションを開きます。" DisplayName="初期化" sap:VirtualizedContainerService.HintSize="719,125" sap2010:WorkflowViewState.IdRef="Sequence_2">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -75,7 +75,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </Sequence>
-    <Sequence sap2010:Annotation.AnnotationText="実際の処理を行います。" DisplayName="プロセス" sap:VirtualizedContainerService.HintSize="558,814" sap2010:WorkflowViewState.IdRef="Sequence_3">
+    <Sequence sap2010:Annotation.AnnotationText="実際の処理を行います。" DisplayName="プロセス" sap:VirtualizedContainerService.HintSize="719,1097" sap2010:WorkflowViewState.IdRef="Sequence_3">
       <Sequence.Variables>
         <Variable x:TypeArguments="x:Int32" Name="index" />
         <Variable x:TypeArguments="scg:List(snm:MailMessage)" Name="messages" />
@@ -87,21 +87,21 @@
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:GetIMAPMailMessages TimeoutMS="{x:Null}" DeleteMessages="False" DisplayName="IMAP メール メッセージを取得" Email="[in_Config(&quot;imap_user&quot;)]" EnableSSL="True" sap:VirtualizedContainerService.HintSize="516,22" sap2010:WorkflowViewState.IdRef="GetIMAPMailMessages_1" MailFolder="[in_Config(&quot;imap_mailbox&quot;)]" MarkAsRead="False" Messages="[messages]" OnlyUnreadMessages="False" Password="[in_Config(&quot;imap_password&quot;)]" Port="[in_Config(&quot;imap_port&quot;)]" SecureConnection="Auto" Server="[in_Config(&quot;imap_server&quot;)]" Top="30" />
-      <ui:ForEach x:TypeArguments="snm:MailMessage" CurrentIndex="[index]" DisplayName="繰り返し (Messages)" sap:VirtualizedContainerService.HintSize="516,629" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[messages]">
+      <ui:GetIMAPMailMessages TimeoutMS="{x:Null}" DeleteMessages="False" DisplayName="IMAP メール メッセージを取得" Email="[in_Config(&quot;imap_user&quot;)]" EnableSSL="True" sap:VirtualizedContainerService.HintSize="677,22" sap2010:WorkflowViewState.IdRef="GetIMAPMailMessages_1" MailFolder="[in_Config(&quot;imap_mailbox&quot;)]" MarkAsRead="False" Messages="[messages]" OnlyUnreadMessages="False" Password="[in_Config(&quot;imap_password&quot;)]" Port="[in_Config(&quot;imap_port&quot;)]" SecureConnection="Auto" Server="[in_Config(&quot;imap_server&quot;)]" Top="30" />
+      <ui:ForEach x:TypeArguments="snm:MailMessage" CurrentIndex="[index]" DisplayName="繰り返し (Messages)" sap:VirtualizedContainerService.HintSize="677,912" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[messages]">
         <ui:ForEach.Body>
           <ActivityAction x:TypeArguments="snm:MailMessage">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="snm:MailMessage" Name="message" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="for 文内の処理" sap:VirtualizedContainerService.HintSize="480,495" sap2010:WorkflowViewState.IdRef="Sequence_8">
+            <Sequence DisplayName="for 文内の処理" sap:VirtualizedContainerService.HintSize="641,778" sap2010:WorkflowViewState.IdRef="Sequence_8">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <TryCatch DisplayName="キュー投入" sap:VirtualizedContainerService.HintSize="438,403" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+              <TryCatch DisplayName="キュー投入" sap:VirtualizedContainerService.HintSize="599,686" sap2010:WorkflowViewState.IdRef="TryCatch_1">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -128,10 +128,10 @@
                   </Sequence>
                 </TryCatch.Try>
                 <TryCatch.Catches>
-                  <Catch x:TypeArguments="ui:OrchestratorHttpException" sap:VirtualizedContainerService.HintSize="404,21" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+                  <Catch x:TypeArguments="ui:OrchestratorHttpException" sap:VirtualizedContainerService.HintSize="565,524" sap2010:WorkflowViewState.IdRef="Catch`1_1">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
@@ -139,7 +139,7 @@
                       <ActivityAction.Argument>
                         <DelegateInArgument x:TypeArguments="ui:OrchestratorHttpException" Name="exception" />
                       </ActivityAction.Argument>
-                      <Sequence DisplayName="シーケンス" sap:VirtualizedContainerService.HintSize="559,412" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                      <Sequence DisplayName="シーケンス" sap:VirtualizedContainerService.HintSize="559,455" sap2010:WorkflowViewState.IdRef="Sequence_7">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -177,7 +177,7 @@
         </sap:WorkflowViewStateService.ViewState>
       </ui:ForEach>
     </Sequence>
-    <Sequence sap2010:Annotation.AnnotationText="出力データを書き込み、アプリケーションを閉じ、メールを送信します。" DisplayName="プロセスを終了" sap:VirtualizedContainerService.HintSize="558,125" sap2010:WorkflowViewState.IdRef="Sequence_4">
+    <Sequence sap2010:Annotation.AnnotationText="出力データを書き込み、アプリケーションを閉じ、メールを送信します。" DisplayName="プロセスを終了" sap:VirtualizedContainerService.HintSize="719,125" sap2010:WorkflowViewState.IdRef="Sequence_4">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
